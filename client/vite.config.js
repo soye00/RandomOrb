@@ -11,11 +11,12 @@ export default defineConfig({
       includeAssets: ['favicon.svg', 'apple-touch-icon.png', 'robots.txt'],
       manifest: {
         name: '고민구슬',
-        short_name: 'Orb',
+        short_name: '고민구슬',
         description: '고민구슬',
         theme_color: '#ffffff',
         background_color: '#ffffff',
         display: 'standalone',
+        orientation : 'portrait',
         start_url: '/',
         icons: [
           {
