@@ -7,16 +7,22 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 .instruction {
     position: absolute;
-    top: 10%;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
     color: #a0a0a0;
     font-size: 1.2rem;
     font-weight: 400;
     text-align: center;
     pointer-events: none;
+    width: 90%;
+    max-width: 400px;
 }
 
 .crystal-ball {
@@ -29,14 +35,14 @@
     /*        inset 0 0 60px rgba(0, 0, 0, 0.7),*/
     /*        inset 15px -15px 30px rgba(255, 255, 255, 0.25),*/
     /*        inset -10px 10px 20px rgba(0, 0, 0, 0.5);*/
-    /*border: 1px solid rgba(255, 255, 255, 0.3);*/
     cursor: pointer;
-    /*backdrop-filter: blur(5px);*/
+    backdrop-filter: blur(5px);
     filter: contrast(1.1);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    touch-action: manipulation; /* 모바일 더블 탭 동작 개선 */
 }
 
 .answer-text {
@@ -44,18 +50,20 @@
     top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #333333; /* 어두운 색상으로 변경 */
+    color: #333333;
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
     font-family: 'Arial', sans-serif;
-    text-shadow: 0 0 8px #333333; /* 어두운 그림자 조정 */
+    text-shadow: 0 0 8px #333333;
     pointer-events: none;
 }
 
 .reset-button {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
     color: #a0a0a0;
     font-size: 1.2rem;
     font-weight: 400;
@@ -64,6 +72,8 @@
     border: none;
     cursor: pointer;
     transition: color 0.3s ease;
+    width: 90%;
+    max-width: 400px;
 }
 
 .reset-button:hover {

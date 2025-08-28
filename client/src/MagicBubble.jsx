@@ -40,7 +40,6 @@ export default function MagicBubble() {
             <motion.div
                 className="crystal-ball"
                 onDoubleClick={handleDoubleClick}
-                onTouchStart={handleDoubleClick} // 모바일 터치 지원
                 animate={controls}
                 initial={{ scale: 1 }}
                 transition={{ type: 'spring', stiffness: 300 }}
