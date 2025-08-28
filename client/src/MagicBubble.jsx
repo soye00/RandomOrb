@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import Particles from 'react-tsparticles';
 import './MagicBubble.css';
 
 export default function MagicBubble() {
@@ -46,61 +45,14 @@ export default function MagicBubble() {
                 initial={{ scale: 1 }}
                 transition={{ type: 'spring', stiffness: 300 }}
             >
+                <img src="/orbw.png" alt="Magic Orb" style={{ width: '100%', height: '100%', borderRadius: '50%' }} />
                 {showAnswer && <div className="answer-text">{answer}</div>}
-                <Particles
-                    options={{
-                        particles: {
-                            number: { value: 20 },
-                            size: { value: 2, random: { enable: true, minimumValue: 1 } },
-                            color: { value: "#ffffff" },
-                            move: {
-                                enable: true,
-                                speed: 0.5,
-                                direction: "none",
-                                random: true,
-                                outModes: { default: "bounce" }
-                            },
-                            opacity: { value: 0.5, random: { enable: true, minimumValue: 0.3 } },
-                            shape: { type: "circle" }
-                        },
-                        fullScreen: { enable: false },
-                        style: {
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            width: '100%',
-                            height: '100%',
-                            borderRadius: '50%'
-                        }
-                    }}
-                />
             </motion.div>
             {showAnswer && (
                 <button className="reset-button" onClick={handleReset}>
                     다시
                 </button>
             )}
-            <Particles
-                options={{
-                    particles: {
-                        number: { value: 30 },
-                        size: { value: 3 },
-                        color: { value: "#ffffff" },
-                        move: { enable: true, speed: 1, outModes: "bounce" },
-                        opacity: { value: 0.7 },
-                        shape: { type: "circle" }
-                    },
-                    fullScreen: { enable: false }
-                }}
-                style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    pointerEvents: 'none'
-                }}
-            />
         </div>
     );
 }
